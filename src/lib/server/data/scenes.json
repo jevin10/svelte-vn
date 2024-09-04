@@ -1,0 +1,36 @@
+{
+  "scenes": [
+    {
+      "id": "start",
+      "background": {
+        "id": "park_bg",
+        "url": "/assets/backgrounds/park.png"
+      },
+      "characters": [
+        {
+          "characterId": "protagonist",
+          "emotion": "neutral",
+          "position": "center"
+        }
+      ],
+      "dialogue": [
+        {
+          "characterId": "protagonist",
+          "text": "It's a beautiful day in the park. What should I do?",
+          "emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Take a walk",
+          "nextSceneId": "walk_scene"
+        },
+        {
+          "text": "Sit on a bench",
+          "nextSceneId": "bench_scene"
+        }
+      ],
+      "nextSceneId": null
+    }
+  ]
+}

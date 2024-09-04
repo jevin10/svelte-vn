@@ -10,12 +10,16 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        nodejs = pkgs.nodejs_latest;
+        npmLatest = pkgs.nodePackages.npm.override {
+          inherit nodejs;
+        };
       in
       {
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            pkgs.nodejs_latest
-            pkgs.nodePackages.npm
+            nodejs
+            npmLatest
           ];
 
           shellHook = ''
